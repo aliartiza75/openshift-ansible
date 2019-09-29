@@ -317,6 +317,7 @@ class ActionModule(ActionBase):
         """Checks to ensure openshift_kubelet_name_override
            and openshift_public_hostname
            conform to the proper length of 63 characters or less"""
+        print "*************************************************************************************************************************************************************************************************************************************************************************"
         for varname in ('openshift_public_hostname', 'openshift_kubelet_name_override'):
             var_value = self.template_var(host, varname)
             if var_value and len(var_value) > 63:
