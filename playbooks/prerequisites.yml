@@ -7,7 +7,7 @@
     fail:
       msg: "openshift_kubelet_name_override Cannot be defined for new hosts"
     when:
-    - openshift_kubelet_name_override is defined
+            #- openshift_kubelet_name_override is defined
     - openshift_cloudprovider_kind | default('', true) != 'azure'
 
 - import_playbook: init/main.yml
